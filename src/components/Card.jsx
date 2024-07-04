@@ -21,17 +21,21 @@ export default function Card({ data, reference, onDescriptionChange }) {
       <motion.div
         drag
         dragConstraints={reference}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
         className="w-60 h-72 rounded-[35px] bg-zinc-950 text-white p-5 relative overflow-hidden flex-shrink-0"
       >
         <FaFileAlt />
         <div>
-          <textarea 
+          <textarea
             className="text-sm leading-normal mt-6 h-36 w-full font-semibold resize-none bg-zinc-950 outline-none"
             value={description}
             placeholder="Add a description..."
             spellCheck="false"
-        
-            
             onChange={handleDescriptionChange}
           />
         </div>

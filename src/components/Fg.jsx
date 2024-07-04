@@ -6,7 +6,7 @@ export default function Fg() {
   const [data, setData] = useState([]);
 
   const addCard = () => {
-    const newCard ={};
+    const newCard = {};
     setData([...data, newCard]);
   };
 
@@ -21,13 +21,13 @@ export default function Fg() {
             Add Docs +
           </button>
         </div>
-        <div
-          ref={ref}
-          className="fixed top-20 left-0 w-full h-[90%] flex gap-5 flex-wrap p-10"
-        >
+        <div ref={ref} className="fixed top-20 left-0 w-full h-[90%]">
           {data.map((item, index) => (
-            <Card data={item} reference={ref} />
-          ))}
+            <Card
+              data={item}
+              reference={ref}
+            />
+          ))} 
         </div>
       </div>
     </>
